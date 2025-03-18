@@ -1,0 +1,13 @@
+sp-document:
+  data_sender:
+    - toto.processing_error.v1
+    - toto.activities.v1
+  data_receiver:
+    - toto.processing_error.v1
+azp-lausa:
+  data_sender:
+    - toto.processing_error.v1
+    - toto.activities.v1
+  data_receiver:
+    - toto.processing_error.v1
+

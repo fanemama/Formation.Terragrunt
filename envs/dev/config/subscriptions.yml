@@ -1,0 +1,16 @@
+---
+toto.opposite.v1:
+  - topic: toto.activities.v1
+    requires_session: true
+    lock_duration: P0DT0H5M0S
+    rules:
+      - filterTest1
+toto.loupers.v1:
+  - topic: toto.processing_error.v1
+    lock_duration: P0DT0H5M0S
+  - topic: toto.activities.v1
+    lock_duration: P0DT0H5M0S
+  - topic: toto.processing_error.v1
+    lock_duration: P0DT0H5M0S
+    rules:
+      - excludeTest1Test2

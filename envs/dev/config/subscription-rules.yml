@@ -1,0 +1,11 @@
+filterTest1:
+  filter_type: CorrelationFilter
+  correlation_filter:
+    label: test1
+filterTest2:
+  filter_type: CorrelationFilter
+  correlation_filter:
+    toto: test2
+excludeTest1Test2:
+  filter_type: SqlFilter
+  sql_filter: sys.label  != 'test1' AND toto  != 'test2'
