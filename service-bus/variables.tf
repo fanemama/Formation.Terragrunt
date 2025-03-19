@@ -24,22 +24,44 @@ variable "instance" {
   default     = "001"
 }
 
-variable "topic_file_content" {
-  description = "content of the topic file."
+variable "topic_file_path" {
+  description = "path of the topic file."
   type        = any
 }
 
-variable "subscription_file_content" {
-  description = "content of the subscription file."
+variable "subscription_file_path" {
+  description = "path of the subscription file."
   type        = any
 }
 
-variable "subscription_rule_file_content" {
-  description = "content of the subscription rule file."
+variable "subscription_rule_file_path" {
+  description = "path of the subscription rule file."
   type        = any
 }
 
-variable "role_file_content" {
-  description = "content of the topic file."
+variable "role_file_path" {
+  description = "path of the topic file."
   type        = any
+}
+variable "ARM_CLIENT_SECRET" {
+  description = "The client secret for the Azure Service Principal"
+  type        = string
+  sensitive   = true
+}
+
+variable "ARM_CLIENT_ID" {
+  description = "The client ID for the Azure Service Principal"
+  type        = string
+  sensitive   = true
+}
+
+variable "ARM_TENANT_ID" {
+  description = "The tenant ID for Azure AD"
+  type        = string
+  sensitive   = true
+}
+
+variable "ARM_SUBSCRIPTION_ID" {
+  description = "The subscription ID for Azure"
+  type        = string
 }
