@@ -2,7 +2,7 @@
 
 
 locals {
-  topic_configs = yamldecode(var.topic_file_content)
+  topic_configs = var.topic_file_content
    topic_prefix = "sbt"
 }
 

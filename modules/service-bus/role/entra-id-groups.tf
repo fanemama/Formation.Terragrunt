@@ -1,7 +1,7 @@
 
 
 locals {
-  roles_configs    = yamldecode(var.role_file_content)
+  roles_configs    = var.role_file_content
   
   role_topic_names = toset(flatten([for key, value in local.roles_configs : flatten([value.data_sender, value.data_receiver])]))
 

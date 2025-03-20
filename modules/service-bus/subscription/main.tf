@@ -2,7 +2,7 @@
 
 
 locals {
-  subscription_configs = yamldecode(var.subscription_file_content)
+  subscription_configs = var.subscription_file_content
   flattened_subscriptions = merge(flatten([
     for sub_name, configs in local.subscription_configs : [
       for config in configs : { "${sub_name}" : {

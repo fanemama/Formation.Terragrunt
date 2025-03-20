@@ -1,5 +1,5 @@
 locals {
-  subscription_rules_configs = yamldecode(var.subscription_rule_file_content)
+  subscription_rules_configs = var.subscription_rule_file_content
   subscription_rules         = merge([for key,value in local.flattened_subscriptions : {"${key}": value } if !(value.rules == null || length(value.rules) == 0) ]...)
   flattened_subscriptions_rules = merge(flatten([
     for sub_name, configs in local.flattened_subscriptions : [
